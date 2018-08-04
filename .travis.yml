@@ -1,0 +1,8 @@
+sudo: false
+language: go
+go:
+- 1.10.x
+script:
+- go test -race -coverprofile=coverage.txt -covermode=atomic -v ./...
+after_success:
+- curl -sL https://codecov.io/bash | bash
