@@ -27,13 +27,13 @@ func main() {
 ## Benchmark
 
 ```bash
-~ go test -bench=.
+~ go test -bench=. -benchmem
 goos: darwin
 goarch: amd64
 pkg: github.com/notnil/combos
-Benchmark10C2-8     	  500000	      2627 ns/op
-Benchmark100C2-8    	   10000	    220249 ns/op
-Benchmark1000C2-8   	      20	  84906653 ns/op
+Benchmark10C2-8     	  500000	      2628 ns/op	    4080 B/op	      62 allocs/op
+Benchmark100C2-8    	   10000	    219910 ns/op	  556416 B/op	    4980 allocs/op
+Benchmark1000C2-8   	      20	  89627977 ns/op	78746426 B/op	  499554 allocs/op
 PASS
-ok  	github.com/notnil/combos	6.263s
+ok  	github.com/notnil/combos	5.582s
 ```
